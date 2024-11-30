@@ -44,17 +44,17 @@ jobs:
         erase System.IO.dll /s
         erase System.Security.*.dll /s
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
-        name: unp4k-suite-v${{ env.UNP4K_VERSION }}
+        name: unp4k-suite
         path: src/unp4k.gui/bin/Release
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
-        name: unforge-v${{ env.UNP4K_VERSION }}
+        name: unforge
         path: src/unforge/bin/Release/net47/win-x64
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
-        name: unp4k-v${{ env.UNP4K_VERSION }}
+        name: unp4k
         path: src/unp4k/bin/Release/net47/win-x64
